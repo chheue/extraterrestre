@@ -6,7 +6,6 @@ import { InfoService } from '../../../_services/info.service';
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css'],
   providers: [InfoService]
 })
 export class EditComponent implements OnInit {

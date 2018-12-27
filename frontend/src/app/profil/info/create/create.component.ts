@@ -6,7 +6,6 @@ import { InfoService } from '../../../_services/info.service';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css'],
   providers: [InfoService]
 })
 export class CreateComponent implements OnInit {

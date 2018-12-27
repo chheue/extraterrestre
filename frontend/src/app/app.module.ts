@@ -15,6 +15,8 @@ import { IndexComponent } from './profil/info/index/index.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { InfoService } from './_services/info.service';
+import { ContactService } from './_services/contact.service';
+import { AuthService } from './_services/auth.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import { InfoService } from './_services/info.service';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [InfoService],
+  providers: [InfoService, ContactService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
