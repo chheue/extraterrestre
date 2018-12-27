@@ -1,0 +1,19 @@
+{
+    "name": "Docker-web_app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "Eric CHHEU",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "cookie-session": "^2.0.0-beta.3",
+        "cors": "^2.8.5",
+        "ejs": "^2.6.1",
+        "express": "^4.16.4",
+        "mongoose": "^5.4.0"
+    }
+}

@@ -1,0 +1,28 @@
+version: "3"
+services:
+  frontend:
+    restart: always
+    build: frontend
+    ports:
+      - "4200:4200"
+  backend:
+    restart: always
+    build: backend
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - "mongodata:/data/db"
+    command: '--smallfiles --logpath=/dev/null'
+    environment:
+      MONGODB_DATABASE: "user"
+
+volumes:
+  mongodata:

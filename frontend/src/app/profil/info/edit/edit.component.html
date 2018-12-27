@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-title">
+    <h2>Modification des informations</h2>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="angForm" (ngSubmit)="updateInfo()" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Age</label>
+        <input type="text" class="form-control" name="age" formControlName="age" value="{{info.age}}" #age />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Famille</label>
+        <input type="text" class="form-control" name="famille" formControlName="famille" value="{{info.famille}}" #famille />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Race</label>
+        <input type="text" class="form-control" name="race" formControlName="race" value="{{info.race}}" #race />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Nourriture</label>
+        <input type="text" class="form-control" name="nourriture" formControlName="nourriture" value="{{info.nourriture}}" #nourriture />
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Modifier" />
+      </div>
+    </form>
+  </div>
+</div>

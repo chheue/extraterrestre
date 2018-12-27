@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-title">
+    <h2>Création des informations</h2>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="angForm" (ngSubmit)="createInfo()" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Age</label>
+        <input type="text" class="form-control" name="age" formControlName="age" #age />
+      </div>
+      <div *ngIf="angForm.controls['age'].invalid && (angForm.controls['age'].dirty || angForm.controls['age'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['age'].errors.required">
+          Age requis.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Famille</label>
+        <input type="text" class="form-control" name="famille" formControlName="famille" #famille />
+      </div>
+      <div *ngIf="angForm.controls['famille'].invalid && (angForm.controls['famille'].dirty || angForm.controls['famille'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['famille'].errors.required">
+          Famille requis.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Race</label>
+        <input type="text" class="form-control" name="race" formControlName="race" #race />
+      </div>
+      <div *ngIf="angForm.controls['race'].invalid && (angForm.controls['race'].dirty || angForm.controls['race'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['race'].errors.required">
+          race requis.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Nourriture</label>
+        <input type="text" class="form-control" name="nourriture" formControlName="nourriture" #nourriture />
+      </div>
+      <div *ngIf="angForm.controls['nourriture'].invalid && (angForm.controls['nourriture'].dirty || angForm.controls['nourriture'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['nourriture'].errors.required">
+          nourritures requis.
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-primary" value="Sauvegarder" />
+      </div>
+    </form>
+  </div>
+</div>

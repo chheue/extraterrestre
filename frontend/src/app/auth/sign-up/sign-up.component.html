@@ -1,0 +1,14 @@
+<h2>Inscription </h2>
+<form [formGroup]='signUpForm' (ngSubmit)="signUpUser()" novalidate>
+  <input type="text" class="form-control" formControlName="login" placeholder="Pseudo" />
+  <div class="alert  alert-danger" *ngIf="signUpForm.get('login').hasError('required') && signUpForm.get('login').touched">
+    Login is required
+  </div>
+
+  <input formControlName='password' type="password" class="form-control" placeholder="Mot de passe" />
+  <div class="alert  alert-danger" *ngIf=" !signUpForm.get('password').valid && signUpForm.get('password').touched">
+    Password is required
+  </div>
+  <input type="submit" value="S'inscrire">
+</form>
+
