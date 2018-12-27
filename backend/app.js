@@ -118,7 +118,7 @@ MongoClient.connect(url, function (err, db) {
                 password: 'aaa'
             }
             console.log(login);
-            dbo.collection("users").findOne(user, function (err, resp) {
+            dbo.collection("users").findOne({ 'login': login }, function (err, resp) {
                 if (err)
                     throw err;
                 if (resp) {
